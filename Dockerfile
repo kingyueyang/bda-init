@@ -9,4 +9,4 @@ COPY data /root/data
 
 WORKDIR  /root
 
-CMD python /root/init_zk_data.py
+CMD python /root/init_zk_data.py import

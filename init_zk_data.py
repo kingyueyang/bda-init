@@ -19,7 +19,7 @@ DATA_DIR = '%s/data' % sys.path[0]
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR, mode=0755)
 
-zk_address = 'localhost:2181'
+zk_address = '172.24.5.95:2181'
 zookeeper_op = KazooClient(hosts=zk_address)
 zookeeper_op.start()
 
@@ -193,6 +193,8 @@ if '__main__' == __name__:
 
     if 'export' == aciton:
         export_zk()
+        print "export done"
 
     else:
         import_zk()
+        print "import done"
